@@ -1,0 +1,267 @@
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+
+    body {
+        background-color: #33D4FF;
+    }
+        
+    h1 {
+        text-align: center;
+        font-family: Calibri;
+    }
+
+    .outerFbox {
+        display: box;
+        margin: auto; 
+        padding: 60px;
+        height: 900px;
+        width: 900px;
+        border-width: 0.5em;
+    }
+
+    .gridContainer {
+        display: grid;
+        margin: auto;
+        border: 1px;
+        border-style: solid black;
+        height: 900px;
+        width: 900px;
+        grid-template-columns: repeat(auto-fill, 60px);
+        grid-template-rows: repeat(auto-fill, 60px);
+    }
+
+    .gridElem {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+    }
+    
+    .gridElemTripleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: pink;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: lightseagreen;
+    }
+
+    .gridElemDoubleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: lightblue;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: purple;
+    }
+
+    .gridElemTripleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 60px;
+        width: 60px;
+        background-color: blue;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+
+    body {
+        background-color: #33D4FF;
+    }
+        
+    h1 {
+        text-align: center;
+        font-family: Calibri;
+    }
+
+    .outerFbox {
+        display: box;
+        margin: auto;
+        padding-top: 20px;
+        height: 750px;
+        width: 750px;
+        border-width: 0.5em;
+    }
+
+    .gridContainer {
+        display: grid;
+        margin: auto;
+        border: 1px;
+        border-style: solid black;
+        height: 750px;
+        width: 750px;
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-template-rows: repeat(auto-fill, 50px);
+    }
+
+    .gridElem {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+    }
+    
+    .gridElemTripleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: pink;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: lightseagreen;
+    }
+
+    .gridElemDoubleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: lightblue;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: purple;
+    }
+
+    .gridElemTripleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+    }
+}
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    body {
+        background-color: #33D4FF;
+    }
+        
+    h1 {
+        text-align: center;
+        font-family: Calibri;
+    }
+
+    .outerFbox {
+        display: box;
+        margin: auto;
+        padding-top: 20px;
+        height: 525px;
+        width: 525px;
+        border-width: 0.5em;
+    }
+
+    .gridContainer {
+        display: grid;
+        margin: auto;
+        border: 1px;
+        border-style: solid black;
+        height: 525px;
+        width: 525px;
+        grid-template-columns: repeat(auto-fill, 35px);
+        grid-template-rows: repeat(auto-fill, 35px);
+    }
+
+    .gridElem {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: white;
+    }
+    
+    .gridElemTripleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: pink;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: lightseagreen;
+    }
+
+    .gridElemDoubleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: lightblue;
+    }
+
+    .gridElemDoubleWord {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: purple;
+    }
+
+    .gridElemTripleLetter {
+        border: 1px;
+        border-style: solid;
+        border-color: black;
+        height: 35px;
+        width: 35px;
+        background-color: blue;
+    }
+}
+
+
+
+/* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */
+/* https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/ */
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/ */
+/* https://web.dev/optimize-css-background-images-with-media-queries/ */
