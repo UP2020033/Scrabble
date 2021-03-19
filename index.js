@@ -1,3 +1,3 @@
-const test = 'hi';
+var test = 'hi';
 
 console.log(test)
