@@ -3,11 +3,45 @@
 
     body {
         background-color: #33D4FF;
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    ul {
+        display: flex;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        float: right;
+        text-decoration: none;
+    }
+
+    li {
+        display: inline;
+        color: black;
+        margin: 0 100px;
+        font-family: Calibri;
+        font-size: 20px;
+      }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
         
     h1 {
+        margin-top: 100px;
         text-align: center;
         font-family: Calibri;
+        font-size: 35px;
     }
 
     .outerFbox {
@@ -89,19 +123,53 @@
 
     body {
         background-color: #33D4FF;
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    ul {
+        display: flex;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        float: right;
+        text-decoration: none;
+    }
+
+    li {
+        display: inline;
+        color: black;
+        margin: 0 75px;
+        font-family: Calibri;
+        font-size: 15px;
+      }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
         
     h1 {
+        margin-top: 80px;
         text-align: center;
         font-family: Calibri;
+        font-size: 30px;
     }
 
     .outerFbox {
         display: box;
         margin: auto;
-        padding-top: 20px;
-        height: 750px;
-        width: 750px;
+        padding-top: 10px;
+        height: 675px;
+        width: 675px;
         border-width: 0.5em;
     }
 
@@ -110,18 +178,18 @@
         margin: auto;
         border: 1px;
         border-style: solid black;
-        height: 750px;
-        width: 750px;
-        grid-template-columns: repeat(auto-fill, 50px);
-        grid-template-rows: repeat(auto-fill, 50px);
+        height: 675px;
+        width: 675px;
+        grid-template-columns: repeat(auto-fill, 45px);
+        grid-template-rows: repeat(auto-fill, 45px);
     }
 
     .gridElem {
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: white;
     }
     
@@ -129,8 +197,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: pink;
     }
 
@@ -138,8 +206,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: lightseagreen;
     }
 
@@ -147,8 +215,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: lightblue;
     }
 
@@ -156,8 +224,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: purple;
     }
 
@@ -165,8 +233,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
         background-color: blue;
     }
 }
@@ -176,19 +244,53 @@
 
     body {
         background-color: #33D4FF;
+        margin: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    ul {
+        display: flex;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        float: right;
+        text-decoration: none;
+    }
+
+    li {
+        display: inline;
+        color: black;
+        margin: 0 70px;
+        font-family: Calibri;
+        font-size: 15px;
+      }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
         
     h1 {
+        margin-top: 60px;
         text-align: center;
         font-family: Calibri;
+        font-size: 25px;
     }
 
     .outerFbox {
         display: box;
         margin: auto;
-        padding-top: 20px;
-        height: 525px;
-        width: 525px;
+        padding-top: 30px;
+        height: 675px;
+        width: 675px;
         border-width: 0.5em;
     }
 
@@ -197,18 +299,18 @@
         margin: auto;
         border: 1px;
         border-style: solid black;
-        height: 525px;
-        width: 525px;
-        grid-template-columns: repeat(auto-fill, 35px);
-        grid-template-rows: repeat(auto-fill, 35px);
+        height: 600px;
+        width: 600px;
+        grid-template-columns: repeat(auto-fill, 40px);
+        grid-template-rows: repeat(auto-fill, 40px);
     }
 
     .gridElem {
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: white;
     }
     
@@ -216,8 +318,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: pink;
     }
 
@@ -225,8 +327,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: lightseagreen;
     }
 
@@ -234,8 +336,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: lightblue;
     }
 
@@ -243,8 +345,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: purple;
     }
 
@@ -252,8 +354,8 @@
         border: 1px;
         border-style: solid;
         border-color: black;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         background-color: blue;
     }
 }
