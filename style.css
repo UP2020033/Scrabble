@@ -45,7 +45,7 @@
     }
 
     .outerFbox {
-        display: box;
+        display: flex;
         margin: auto; 
         padding: 60px;
         height: 900px;
@@ -57,7 +57,8 @@
         display: grid;
         margin: auto;
         border: 1px;
-        border-style: solid black;
+        border-style: solid;
+        border-color: black;
         height: 900px;
         width: 900px;
         grid-template-columns: repeat(auto-fill, 60px);
@@ -185,7 +186,7 @@
     }
 
     .outerFbox {
-        display: box;
+        display: flex;
         margin: auto;
         padding-top: 10px;
         height: 675px;
@@ -334,8 +335,10 @@
         border-width: 0.5em;
     }
 
-    .player1Fox {
+    .playerOneFbox {
         display: box;
+        margin: left;
+        border-width: 0.5em;
     }
 
     .gridContainer {
@@ -365,6 +368,10 @@
         height: 40px;
         width: 40px;
         background-color: #FFC0CB;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
     }
 
     .gridElemDoubleWord {
@@ -374,6 +381,10 @@
         height: 40px;
         width: 40px;
         background-color: #20B2AA;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
     }
 
     .gridElemDoubleLetter {
@@ -383,6 +394,10 @@
         height: 40px;
         width: 40px;
         background-color: #ADD8E6;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
     }
 
     .gridElemDoubleWord {
@@ -392,6 +407,10 @@
         height: 40px;
         width: 40px;
         background-color: #E6B7ED;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
     }
 
     .gridElemTripleLetter {
@@ -401,6 +420,10 @@
         height: 40px;
         width: 40px;
         background-color: #88B6EB;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
     }
 }
 
