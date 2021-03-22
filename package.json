@@ -1,5 +1,5 @@
 {
-  "name": "appprog-scrabble",
+  "name": "scrabblecw",
   "version": "1.0.0",
   "description": "Scrabble game",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/MoeJcNeil/AppProg-Scrabble.git"
   },
-  "author": "",
+  "author": "up2020033@myport.ac.uk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MoeJcNeil/AppProg-Scrabble/issues"
