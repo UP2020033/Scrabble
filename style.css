@@ -198,7 +198,8 @@
         display: grid;
         margin: auto;
         border: 1px;
-        border-style: solid black;
+        border-style: solid;
+        border-color: black;
         height: 675px;
         width: 675px;
         grid-template-columns: repeat(auto-fill, 45px);
@@ -345,7 +346,8 @@
         display: grid;
         margin: auto;
         border: 1px;
-        border-style: solid black;
+        border-style: solid;
+        border-color: black;
         height: 600px;
         width: 600px;
         grid-template-columns: repeat(auto-fill, 40px);
