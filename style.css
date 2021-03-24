@@ -56,9 +56,7 @@
     .gridContainer {
         display: grid;
         margin: auto;
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 900px;
         width: 900px;
         grid-template-columns: repeat(auto-fill, 60px);
@@ -66,18 +64,14 @@
     }
 
     .gridElem {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: white;
     }
     
     .gridElemTripleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #FFC0CB;
@@ -88,9 +82,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #20B2AA;
@@ -101,9 +93,7 @@
     }
 
     .gridElemDoubleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #ADD8E6;
@@ -114,9 +104,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #E6B7ED;
@@ -127,9 +115,7 @@
     }
 
     .gridElemTripleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #88B6EB;
@@ -197,9 +183,7 @@
     .gridContainer {
         display: grid;
         margin: auto;
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 675px;
         width: 675px;
         grid-template-columns: repeat(auto-fill, 45px);
@@ -207,18 +191,14 @@
     }
 
     .gridElem {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: white;
     }
     
     .gridElemTripleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: #FFC0CB;
@@ -229,9 +209,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: #20B2AA;
@@ -242,9 +220,7 @@
     }
 
     .gridElemDoubleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: #ADD8E6;
@@ -255,9 +231,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: #E6B7ED;
@@ -268,9 +242,7 @@
     }
 
     .gridElemTripleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 45px;
         width: 45px;
         background-color: #88B6EB;
@@ -345,9 +317,7 @@
     .gridContainer {
         display: grid;
         margin: auto;
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 600px;
         width: 600px;
         grid-template-columns: repeat(auto-fill, 40px);
@@ -355,18 +325,14 @@
     }
 
     .gridElem {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: white;
     }
     
     .gridElemTripleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: #FFC0CB;
@@ -377,9 +343,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: #20B2AA;
@@ -390,9 +354,7 @@
     }
 
     .gridElemDoubleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: #ADD8E6;
@@ -403,9 +365,7 @@
     }
 
     .gridElemDoubleWord {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: #E6B7ED;
@@ -416,9 +376,7 @@
     }
 
     .gridElemTripleLetter {
-        border: 1px;
-        border-style: solid;
-        border-color: black;
+        outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: #88B6EB;
