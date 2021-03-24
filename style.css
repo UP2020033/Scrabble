@@ -165,16 +165,17 @@
     }
         
     h1 {
-        margin-top: 80px;
+        margin-top: 60px;
         text-align: center;
         font-family: Calibri;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .outerFbox {
         display: flex;
         margin: auto;
         padding-top: 10px;
+        padding-bottom: 20px;
         height: 675px;
         width: 675px;
         border-width: 0.5em;
@@ -188,6 +189,12 @@
         width: 675px;
         grid-template-columns: repeat(auto-fill, 45px);
         grid-template-rows: repeat(auto-fill, 45px);
+    }
+
+    .gridOutliners {
+        outline: 1px solid black;
+        height: 45px;
+        width: 45px;
     }
 
     .gridElem {
@@ -305,12 +312,6 @@
         padding-top: 30px;
         height: 675px;
         width: 675px;
-        border-width: 0.5em;
-    }
-
-    .playerOneFbox {
-        display: box;
-        margin: left;
         border-width: 0.5em;
     }
 

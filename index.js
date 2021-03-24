@@ -42,3 +42,38 @@ function addGridTiles() {
 }
 
 addGridTiles();
+
+function addNavBar() {
+  const navBar = document.createElement('nav');
+  navBar.className = 'navBar';
+  return navBar;
+}
+
+addNavBar();
+
+document.querySelector('.mainSection').appendChild(addNavBar());
+
+function addNavList() {
+  const navItem = document.createElement('ul');
+  navItem.className = 'navList';
+  return navItem;
+}
+
+document.querySelector('.navBar').appendChild(addNavList());
+
+addNavList();
+
+function addNavListButton(navItemName) {
+  const navButton = document.createElement('li');
+  navButton.className = 'navItem';
+  navButton.textContent = navItemName;
+  return navButton;
+}
+
+addNavListButton('test1');
+
+document.querySelector('.navList').appendChild(addNavListButton('test1'));
+
+addNavListButton('test2');
+
+document.querySelector('.navList').appendChild(addNavListButton('test2'));
