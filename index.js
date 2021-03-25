@@ -1,3 +1,54 @@
+function addNavDiv() {
+  const navBar = document.createElement('div');
+  navBar.id = 'navBar';
+  return navBar;
+}
+
+function addNavDivContainer() {
+  const navBarContainer = document.createElement('div');
+  navBarContainer.className = 'navContainer';
+  return navBarContainer;
+}
+
+function addNavButton(navID) {
+  const navButton = document.createElement('div');
+  navButton.id = navID;
+  return navButton;
+}
+
+function addNavAnchor(text, link) {
+  const navAnchor = document.createElement('a');
+  navAnchor.setAttribute('href', link);
+  navAnchor.innerText = text;
+  navAnchor.className = 'anchorClass';
+  return navAnchor;
+}
+
+document.querySelector('.mainSection').appendChild(addNavDiv());
+document.querySelector('#navBar').appendChild(addNavDivContainer());
+
+document.querySelector('.navContainer').appendChild(addNavButton('navAbout'));
+document.querySelector('#navAbout').appendChild(addNavAnchor('About', 'bbc.co.uk'));
+
+document.querySelector('.navContainer').appendChild(addNavButton('navRules'));
+document.querySelector('#navRules').appendChild(addNavAnchor('Rules', 'test.com'));
+
+function addHeader(title) {
+  const newHeader = document.createElement('h1');
+  newHeader.textContent = title;
+  return newHeader;
+}
+
+document.querySelector('.mainHeader').appendChild(addHeader('ScrabbleGame'));
+
+function addMainContainer() {
+  const mainContainer = document.createElement('div');
+  mainContainer.className = 'mainContainer';
+  return mainContainer;
+}
+
+document.querySelector('.mainSection').appendChild(addMainContainer());
+
 function addOuterFlexBox() {
   const newFlexbox = document.createElement('div');
   newFlexbox.className = 'outerFbox';
@@ -42,38 +93,3 @@ function addGridTiles() {
 }
 
 addGridTiles();
-
-function addNavBar() {
-  const navBar = document.createElement('nav');
-  navBar.className = 'navBar';
-  return navBar;
-}
-
-addNavBar();
-
-document.querySelector('.mainSection').appendChild(addNavBar());
-
-function addNavList() {
-  const navItem = document.createElement('ul');
-  navItem.className = 'navList';
-  return navItem;
-}
-
-document.querySelector('.navBar').appendChild(addNavList());
-
-addNavList();
-
-function addNavListButton(navItemName) {
-  const navButton = document.createElement('li');
-  navButton.className = 'navItem';
-  navButton.textContent = navItemName;
-  return navButton;
-}
-
-addNavListButton('test1');
-
-document.querySelector('.navList').appendChild(addNavListButton('test1'));
-
-addNavListButton('test2');
-
-document.querySelector('.navList').appendChild(addNavListButton('test2'));
