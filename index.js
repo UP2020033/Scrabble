@@ -16,6 +16,8 @@ function addNavButton(navID) {
   return navButton;
 }
 
+// Add innerText adapted from: https://www.techiedelight.com/dynamically-generate-anchor-tag-javascript/
+
 function addNavAnchor(text, link) {
   const navAnchor = document.createElement('a');
   navAnchor.setAttribute('href', link);
@@ -26,9 +28,6 @@ function addNavAnchor(text, link) {
 
 document.querySelector('.mainSection').appendChild(addNavDiv());
 document.querySelector('#navBar').appendChild(addNavDivContainer());
-
-document.querySelector('.navContainer').appendChild(addNavButton('navAbout'));
-document.querySelector('#navAbout').appendChild(addNavAnchor('About', 'bbc.co.uk'));
 
 document.querySelector('.navContainer').appendChild(addNavButton('navRules'));
 document.querySelector('#navRules').appendChild(addNavAnchor('Rules', 'test.com'));
@@ -55,14 +54,14 @@ function addOuterFlexBox() {
   return newFlexbox;
 }
 
-function addGrid() {
+function addGrid(grid) {
   const addNewGrid = document.createElement('div');
-  addNewGrid.className = 'gridContainer';
+  addNewGrid.className = grid;
   return addNewGrid;
 }
 
 document.querySelector('.mainContainer').appendChild(addOuterFlexBox());
-document.querySelector('.outerFbox').appendChild(addGrid());
+document.querySelector('.outerFbox').appendChild(addGrid('gridContainer'));
 
 function addGridTiles() {
   const tripleWord = [0, 7, 14, 105, 119, 210, 217, 224];
@@ -93,3 +92,5 @@ function addGridTiles() {
 }
 
 addGridTiles();
+
+document.querySelector('.outerFbox').appendChild(addGrid('leftGrid'));

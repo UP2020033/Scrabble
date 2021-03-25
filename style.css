@@ -310,8 +310,9 @@
         display: box;
         margin: auto;
         padding-top: 30px;
-        height: 675px;
-        width: 675px;
+        padding-bottom: 30px;
+        height: 700px;
+        width: 700px;
         border-width: 0.5em;
     }
 

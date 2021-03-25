@@ -16,6 +16,8 @@ function addNavButton(navID) {
   return navButton;
 }
 
+// Add innerText adapted from: https://www.techiedelight.com/dynamically-generate-anchor-tag-javascript/
+
 function addNavAnchor(text, link) {
   const navAnchor = document.createElement('a');
   navAnchor.setAttribute('href', link);
