@@ -93,4 +93,157 @@ function addGridTiles() {
 
 addGridTiles();
 
-document.querySelector('.outerFbox').appendChild(addGrid('leftGrid'));
+document.querySelector('.outerFbox').appendChild(addGrid('dragGrid'));
+
+function addDraggableTiles() {
+  const dragTiles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+  'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+  return dragTiles[]
+  }
+}
+
+/*
+function addDragTiles() {
+  const draggableTiles = [
+    {
+      Letter: 'A',
+      Score: 1,
+    },
+    {
+      Letter: 'B',
+      Score: 3,
+    },
+    {
+      Letter: 'C',
+      Score: 3,
+    },
+    {
+      Letter: 'D',
+      Score: 2,
+    },
+    {
+      Letter: 'E',
+      Score: 1,
+    },
+    {
+      Letter: 'F',
+      Score: 4,
+    },
+    {
+      Letter: 'G',
+      Score: 2,
+    },
+    {
+      Letter: 'H',
+      Score: 4,
+    },
+    {
+      Letter: 'I',
+      Score: 1,
+    },
+    {
+      Letter: 'J',
+      Score: 8,
+    },
+    {
+      Letter: 'K',
+      Score: 5,
+    },
+    {
+      Letter: 'L',
+      Score: 1,
+    },
+    {
+      Letter: 'M',
+      Score: 3,
+    },
+    {
+      Letter: 'N',
+      Score: 1,
+    },
+    {
+      Letter: 'O',
+      Score: 1,
+    },
+    {
+      Letter: 'P',
+      Score: 3,
+    },
+    {
+      Letter: 'Q',
+      Score: 10,
+    },
+    {
+      Letter: 'R',
+      Score: 1,
+    },
+    {
+      Letter: 'S',
+      Score: 1,
+    },
+    {
+      Letter: 'T',
+      Score: 1,
+    },
+    {
+      Letter: 'U',
+      Score: 1,
+    },
+    {
+      Letter: 'V',
+      Score: 4,
+    },
+    {
+      Letter: 'W',
+      Score: 4,
+    },
+    {
+      Letter: 'X',
+      Score: 8,
+    },
+    {
+      Letter: 'Y',
+      Score: 4,
+    },
+    {
+      Letter: 'Z',
+      Score: 10,
+    },
+  ];
+  for (let i = 0; i < draggableTiles.length; i++) {
+    const newDragElem = document.createElement('div');
+    newDragElem
+  }
+}
+*/
+
+/*
+const dragElem1 = document.createElement('div');
+dragElem1.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem1);
+
+const dragElem2 = document.createElement('div');
+dragElem2.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem2);
+
+const dragElem3 = document.createElement('div');
+dragElem3.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem3);
+
+const dragElem4 = document.createElement('div');
+dragElem4.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem4);
+
+const dragElem5 = document.createElement('div');
+dragElem5.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem5);
+
+const dragElem6 = document.createElement('div');
+dragElem6.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem6);
+
+const dragElem7 = document.createElement('div');
+dragElem7.className = 'dragElem';
+document.querySelector('.dragGrid').appendChild(dragElem7);
+*/

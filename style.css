@@ -326,6 +326,24 @@
         grid-template-rows: repeat(auto-fill, 40px);
     }
 
+    .dragGrid {
+        display: grid;
+        margin: auto;
+        padding-top: 30px;
+        column-gap: 8px;
+        height: 80px;
+        width: 600px;
+        grid-template-columns: repeat(7, 79px);
+        grid-template-rows: repeat(auto-fill, 70px);
+    }
+
+    .dragElem {
+        outline: 1px solid black;
+        height: 70px;
+        width: 70px;
+        background-color: #F2BF66
+    }
+
     .gridElem {
         outline: 1px solid black;
         height: 40px;
