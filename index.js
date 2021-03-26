@@ -95,13 +95,24 @@ addGridTiles();
 
 document.querySelector('.outerFbox').appendChild(addGrid('dragGrid'));
 
-function addDraggableTiles() {
+function addRandomTiles() {
   const dragTiles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-  'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-  return dragTiles[]
+  return dragTiles[Math.floor(Math.random() * dragTiles.length)];
+}
+
+function addStarterTiles() {
+  for (let i = 0; i < 7; i++) {
+    const newTile = document.createElement('div');
+    newTile.className = 'dragElem';
+    newTile.textContent = addRandomTiles();
   }
 }
+
+document.querySelector('dragGrid').appendChild(addStarterTiles());
+
+addStarterTiles();
 
 /*
 function addDragTiles() {
