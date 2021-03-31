@@ -6,16 +6,16 @@
         margin: 0;
     }
 
-    nav {
+    #navBar {
         position: fixed;
         top: 0;
         background-color: #E3DEDE;
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
-    ul {
+    .navList {
         display: flex;
         top: 0;
         margin: 0;
@@ -24,32 +24,43 @@
         text-decoration: none;
     }
 
-    li {
+    .navItem {
         display: inline;
-        color: black;
-        margin: 0 100px;
-        font-family: Calibri;
-        font-size: 20px;
       }
 
-    a {
+    .anchorClass {
         text-decoration: none;
         color: black;
+        margin: 0 70px;
+        float: right;
+        font-family: Calibri;
+        font-size: 20px;
     }
         
     h1 {
-        margin-top: 100px;
+        margin-top: 60px;
         text-align: center;
         font-family: Calibri;
         font-size: 35px;
     }
 
-    .outerFbox {
+    .mainGridFbox {
         display: flex;
-        margin: auto; 
-        padding: 60px;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
         height: 900px;
         width: 900px;
+        border-width: 0.5em;
+    }
+
+    .dragFbox {
+        display: flex;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 100px;
+        width: 700px;
         border-width: 0.5em;
     }
 
@@ -61,6 +72,24 @@
         width: 900px;
         grid-template-columns: repeat(auto-fill, 60px);
         grid-template-rows: repeat(auto-fill, 60px);
+    }
+
+    .dragGrid {
+        display: grid;
+        margin: auto;
+        padding-top: 30px;
+        column-gap: 2px;
+        height: 80px;
+        width: 900px;
+        grid-template-columns: repeat(7, 100px);
+        grid-template-rows: repeat(auto-fill, 100px);
+    }
+
+    .dragElem {
+        outline: 1px solid black;
+        height: 85px;
+        width: 85px;
+        background-color: #F2BF66
     }
 
     .gridElem {
@@ -133,16 +162,16 @@
         margin: 0;
     }
 
-    nav {
+    #navBar {
         position: fixed;
         top: 0;
         background-color: #E3DEDE;
         width: 100%;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
-    ul {
+    .navList {
         display: flex;
         top: 0;
         margin: 0;
@@ -151,19 +180,19 @@
         text-decoration: none;
     }
 
-    li {
+    .navItem {
         display: inline;
-        color: black;
-        margin: 0 75px;
-        font-family: Calibri;
-        font-size: 15px;
       }
 
-    a {
+    .anchorClass {
         text-decoration: none;
         color: black;
+        margin: 0 70px;
+        float: right;
+        font-family: Calibri;
+        font-size: 15px;
     }
-        
+
     h1 {
         margin-top: 60px;
         text-align: center;
@@ -171,17 +200,26 @@
         font-size: 25px;
     }
 
-    .outerFbox {
+    .mainGridFbox {
         display: flex;
         margin: auto;
         padding-top: 10px;
-        padding-bottom: 20px;
-        height: 675px;
-        width: 675px;
+        height: 700px;
+        width: 700px;
+        border-width: 0.5em;
+    }
+
+    .dragFbox {
+        display: flex;
+        margin: auto;
+        padding-bottom: 15px;
+        height: 100px;
+        width: 700px;
         border-width: 0.5em;
     }
 
     .gridContainer {
+        position: absolute;
         display: grid;
         margin: auto;
         outline: 1px solid black;
@@ -189,6 +227,24 @@
         width: 675px;
         grid-template-columns: repeat(auto-fill, 45px);
         grid-template-rows: repeat(auto-fill, 45px);
+    }
+
+    .dragGrid {
+        display: grid;
+        margin: auto;
+        padding-top: 30px;
+        column-gap: 2px;
+        height: 80px;
+        width: 600px;
+        grid-template-columns: repeat(7, 85px);
+        grid-template-rows: repeat(auto-fill, 85px);
+    }
+
+    .dragElem {
+        outline: 1px solid black;
+        height: 70px;
+        width: 70px;
+        background-color: #F2BF66
     }
 
     .gridOutliners {
@@ -306,12 +362,19 @@
         font-size: 25px;
     }
 
-    .outerFbox {
-        display: box;
+    .mainGridFbox {
+        display: flex;
         margin: auto;
-        padding-top: 30px;
+        height: 650px;
+        width: 650px;
+        border-width: 0.5em;
+    }
+
+    .dragFbox {
+        display: flex;
+        margin: auto;
         padding-bottom: 30px;
-        height: 700px;
+        height: 100px;
         width: 700px;
         border-width: 0.5em;
     }
@@ -329,11 +392,10 @@
     .dragGrid {
         display: grid;
         margin: auto;
-        padding-top: 30px;
-        column-gap: 8px;
+        column-gap: 20px;
         height: 80px;
         width: 600px;
-        grid-template-columns: repeat(7, 79px);
+        grid-template-columns: repeat(7, 70px);
         grid-template-rows: repeat(auto-fill, 70px);
     }
 

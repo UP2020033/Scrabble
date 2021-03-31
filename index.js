@@ -40,6 +40,7 @@ function addHeader(title) {
 
 document.querySelector('.mainHeader').appendChild(addHeader('ScrabbleGame'));
 
+/*
 function addMainContainer() {
   const mainContainer = document.createElement('div');
   mainContainer.className = 'mainContainer';
@@ -47,10 +48,11 @@ function addMainContainer() {
 }
 
 document.querySelector('.mainSection').appendChild(addMainContainer());
+*/
 
-function addOuterFlexBox() {
+function addFlexBox(className) {
   const newFlexbox = document.createElement('div');
-  newFlexbox.className = 'outerFbox';
+  newFlexbox.className = className;
   return newFlexbox;
 }
 
@@ -60,8 +62,8 @@ function addGrid(grid) {
   return addNewGrid;
 }
 
-document.querySelector('.mainContainer').appendChild(addOuterFlexBox());
-document.querySelector('.outerFbox').appendChild(addGrid('gridContainer'));
+document.querySelector('.mainSection').appendChild(addFlexBox('mainGridFbox'));
+document.querySelector('.mainGridFbox').appendChild(addGrid('gridContainer'));
 
 function addGridTiles() {
   const tripleWord = [0, 7, 14, 105, 119, 210, 217, 224];
@@ -93,7 +95,8 @@ function addGridTiles() {
 
 addGridTiles();
 
-document.querySelector('.outerFbox').appendChild(addGrid('dragGrid'));
+document.querySelector('.mainSection').appendChild(addFlexBox('dragFbox'));
+document.querySelector('.dragFbox').appendChild(addGrid('dragGrid'));
 
 function addRandomTiles() {
   const dragTiles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
@@ -101,7 +104,7 @@ function addRandomTiles() {
 
   return dragTiles[Math.floor(Math.random() * dragTiles.length)];
 }
-
+/*
 function addStarterTiles() {
   for (let i = 0; i < 7; i++) {
     const newTile = document.createElement('div');
@@ -113,7 +116,7 @@ function addStarterTiles() {
 document.querySelector('dragGrid').appendChild(addStarterTiles());
 
 addStarterTiles();
-
+*/
 /*
 function addDragTiles() {
   const draggableTiles = [
@@ -229,7 +232,7 @@ function addDragTiles() {
 }
 */
 
-/*
+
 const dragElem1 = document.createElement('div');
 dragElem1.className = 'dragElem';
 document.querySelector('.dragGrid').appendChild(dragElem1);
@@ -257,4 +260,3 @@ document.querySelector('.dragGrid').appendChild(dragElem6);
 const dragElem7 = document.createElement('div');
 dragElem7.className = 'dragElem';
 document.querySelector('.dragGrid').appendChild(dragElem7);
-*/
