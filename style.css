@@ -89,7 +89,11 @@
         outline: 1px solid black;
         height: 85px;
         width: 85px;
-        background-color: #F2BF66
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 85px;
+        font-size: 35px;
     }
 
     .gridElem {
