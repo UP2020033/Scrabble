@@ -2,7 +2,7 @@
 @media (min-width: 1920px) and (max-width: 2560px) {
 
     body {
-        background-color: #EDEAB7;
+        background-color: #84bae8;
         margin: 0;
     }
 
@@ -47,7 +47,7 @@
     .mainGridFbox {
         display: flex;
         margin: auto;
-        padding-top: 30px;
+        padding-top: 100px;
         padding-bottom: 30px;
         height: 900px;
         width: 900px;
@@ -162,14 +162,14 @@
 @media (min-width: 1200px) and (max-width: 1920px) {
 
     body {
-        background-color: #EDEAB7;
+        background-color: #84bae8;
         margin: 0;
     }
 
     #navBar {
         position: fixed;
         top: 0;
-        background-color: #E3DEDE;
+        background-color: #84bae8;
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -207,7 +207,7 @@
     .mainGridFbox {
         display: flex;
         margin: auto;
-        padding-top: 10px;
+        padding-top: 75px;
         height: 700px;
         width: 700px;
         border-width: 0.5em;
@@ -236,7 +236,7 @@
     .dragGrid {
         display: grid;
         margin: auto;
-        padding-top: 30px;
+        padding-top: 15px;
         column-gap: 2px;
         height: 80px;
         width: 600px;
@@ -248,7 +248,11 @@
         outline: 1px solid black;
         height: 70px;
         width: 70px;
-        background-color: #F2BF66
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 70px;
+        font-size: 35px;
     }
 
     .gridOutliners {
@@ -324,7 +328,7 @@
 @media (min-width: 800px) and (max-width: 1200px) {
 
     body {
-        background-color: #EDEAB7;
+        background-color: #84bae8;
         margin: 0;
     }
 
@@ -369,6 +373,7 @@
     .mainGridFbox {
         display: flex;
         margin: auto;
+        padding-top: 50px;
         height: 650px;
         width: 650px;
         border-width: 0.5em;
@@ -405,9 +410,13 @@
 
     .dragElem {
         outline: 1px solid black;
-        height: 70px;
-        width: 70px;
-        background-color: #F2BF66
+        height: 60px;
+        width: 60px;
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 60px;
+        font-size: 35px;
     }
 
     .gridElem {
