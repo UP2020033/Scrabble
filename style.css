@@ -22,8 +22,13 @@
     .gridContainer {
         display: grid;
         margin: auto;
+<<<<<<< Updated upstream
         border: 1px;
         border-style: solid black;
+=======
+        position: fixed;
+        outline: 1px solid black;
+>>>>>>> Stashed changes
         height: 900px;
         width: 900px;
         grid-template-columns: repeat(auto-fill, 60px);
@@ -88,12 +93,18 @@
 @media (min-width: 1200px) and (max-width: 1920px) {
 
     body {
+<<<<<<< Updated upstream
         background-color: #33D4FF;
+=======
+        background-color: #68ade8;
+        margin: 0;
+>>>>>>> Stashed changes
     }
         
     h1 {
         text-align: center;
         font-family: Calibri;
+<<<<<<< Updated upstream
     }
 
     .outerFbox {
@@ -102,18 +113,87 @@
         padding-top: 20px;
         height: 750px;
         width: 750px;
-        border-width: 0.5em;
+=======
+        font-size: 25px;
     }
 
+    .mainGridFbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        width: 100%;
+        border-width: 0.5em;
+    }
+/*
+    .dragFbox {
+        display: flex;
+        float: right;
+        height: 700px;
+        width: 100px;
+>>>>>>> Stashed changes
+        border-width: 0.5em;
+    }
+*/
+    .gridContainer {
+        display: grid;
+        align-self: center;
+        outline: 1px solid black;
+        height: 675px;
+        width: 675px;
+        grid-template-columns: repeat(auto-fill, 45px);
+        grid-template-rows: repeat(auto-fill, 45px);
+    }
+    /*
     .gridContainer {
         display: grid;
         margin: auto;
+<<<<<<< Updated upstream
         border: 1px;
         border-style: solid black;
         height: 750px;
         width: 750px;
         grid-template-columns: repeat(auto-fill, 50px);
         grid-template-rows: repeat(auto-fill, 50px);
+=======
+        outline: 1px solid black;
+        height: 675px;
+        width: 675px;
+        grid-template-columns: repeat(auto-fill, 45px);
+        grid-template-rows: repeat(auto-fill, 45px);
+    }
+    */
+    .dragGrid {
+        display: grid;
+        align-content: flex-end;
+        margin-left: 50px;
+        column-gap: 2px;
+        height: 600px;
+        width: 80px;
+        grid-template-columns: repeat(1, 85px);
+        grid-template-rows: repeat(7, 85px);
+    }
+
+    .dragElem {
+        outline: 1px solid black;
+        height: 60px;
+        width: 60px;
+        float: right;
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 60px;
+        font-size: 35px;
+    }
+
+    .gridOutliners {
+        outline: 1px solid black;
+        height: 45px;
+        width: 45px;
+>>>>>>> Stashed changes
     }
 
     .gridElem {
