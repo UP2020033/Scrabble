@@ -23,17 +23,22 @@ export function addGridTiles() {
     if (tripleWord.includes(i)) {
       newElem.className = 'gridElemTripleWord';
       newElem.textContent = 'TW';
+      newElem.id = `Tile${i}`;
     } else if (tripleLetter.includes(i)) {
       newElem.className = 'gridElemTripleLetter';
       newElem.textContent = 'TL';
+      newElem.id = `Tile${i}`;
     } else if (doubleWord.includes(i)) {
       newElem.className = 'gridElemDoubleWord';
       newElem.textContent = 'DW';
+      newElem.id = `Tile${i}`;
     } else if (doubleLetter.includes(i)) {
       newElem.className = 'gridElemDoubleLetter';
       newElem.textContent = 'DL';
+      newElem.id = `Tile${i}`;
     } else {
       newElem.className = 'gridElem';
+      newElem.id = `Tile${i}`;
     }
     document.querySelector('.gridContainer').appendChild(newElem);
   }

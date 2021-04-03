@@ -14,6 +14,7 @@ export function addStarterTiles() {
     const newTile = document.createElement('div');
     newTile.className = 'dragElem';
     newTile.textContent = addRandomLetter();
+    newTile.id = `dragTile${i}`;
     newTile.draggable = true;
     document.querySelector('.dragGrid').appendChild(newTile);
   }
