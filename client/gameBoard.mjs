@@ -8,6 +8,7 @@ export function addFlexBox(className) {
 export function addGrid(grid) {
   const addNewGrid = document.createElement('div');
   addNewGrid.className = grid;
+  addNewGrid.id = 'gridTest';
   return addNewGrid;
 }
 
@@ -19,25 +20,27 @@ export function addGridTiles() {
 
   for (let i = 0; i < 225; i++) {
     const newElem = document.createElement('div');
-
     if (tripleWord.includes(i)) {
-      newElem.className = 'gridElemTripleWord';
+      newElem.classList.add('gridElemTripleWord');
       newElem.textContent = 'TW';
       newElem.id = `Tile${i}`;
     } else if (tripleLetter.includes(i)) {
-      newElem.className = 'gridElemTripleLetter';
+      newElem.class = 'gridElem';
+      newElem.classList.add('gridElemTripleLetter');
       newElem.textContent = 'TL';
       newElem.id = `Tile${i}`;
     } else if (doubleWord.includes(i)) {
-      newElem.className = 'gridElemDoubleWord';
+      newElem.class = 'gridElem';
+      newElem.classList.add('gridElemDoubleWord');
       newElem.textContent = 'DW';
       newElem.id = `Tile${i}`;
     } else if (doubleLetter.includes(i)) {
-      newElem.className = 'gridElemDoubleLetter';
+      newElem.class = 'gridElem';
+      newElem.classList.add('gridElemDoubleLetter');
       newElem.textContent = 'DL';
       newElem.id = `Tile${i}`;
     } else {
-      newElem.className = 'gridElem';
+      newElem.classList.add('gridElem');
       newElem.id = `Tile${i}`;
     }
     document.querySelector('.gridContainer').appendChild(newElem);
