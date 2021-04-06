@@ -40,15 +40,18 @@ export function addGridTiles() {
       newElem.classList.add('gridElem');
       newElem.id = `Tile${i}`;
     }
+    newElem.classList.add('dropZoneTest');
     document.querySelector('.gridContainer').appendChild(newElem);
   }
   const elem = document.createElement('div');
   elem.className = 'belowBox';
   elem.id = 'belowBox';
   document.querySelector('.gridContainer').appendChild(elem);
+}
 
-  // const innerDiv = document.createElement('div');
-  // innerDiv.id = 'innerDiv';
-  // innerDiv.className = 'innerDiv';
-  // document.querySelector('.belowBox').appendChild(innerDiv);
+export function addButton(id) {
+  const tileButton = document.createElement('button');
+  tileButton.innerText = 'Next turn';
+  tileButton.id = id;
+  document.querySelector('.belowBox').appendChild(tileButton);
 }

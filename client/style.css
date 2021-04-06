@@ -406,7 +406,6 @@
         display: grid;
         margin-left: auto;
         margin-right: auto;
-        /* outline: 1px solid black; */
         border-bottom: solid white 50px;
         height: 600px;
         width: 600px;
@@ -421,12 +420,15 @@
 
     .dragGrid {
         display: grid;
-        margin: auto;
-        column-gap: 20px;
-        height: 80px;
-        width: 600px;
-        grid-template-columns: repeat(7, 70px);
-        grid-template-rows: repeat(auto-fill, 70px);
+        float: left;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 52px;
+        height: 40px;
+        width: 100%;
+        grid-template-columns: repeat(7, 40px);
+        grid-template-rows: repeat(auto-fill, 40px);
     }
 
     .dragElem {
@@ -500,6 +502,13 @@
         font-family: Calibri;
         text-align: center;
         line-height: 35px;
+    }
+
+    #tileButton {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        clear: both;
     }
 }
 

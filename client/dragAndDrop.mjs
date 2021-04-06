@@ -10,9 +10,14 @@ export function dragOverHandler(e) {
 }
 
 export function dropHandler(e) {
-  const data = e.dataTransfer.getData('text/plain');
-  const draggedElem = document.getElementById(data);
-  e.target.insertAdjacentElement('afterbegin', draggedElem);
+  if ((e.target.classList.contains('dragElem') !== true) || (e.target.classList.contains('occupied'))) {
+    const data = e.dataTransfer.getData('text/plain');
+    const draggedElem = document.getElementById(data);
+    e.target.insertAdjacentElement('afterbegin', draggedElem);
+    e.target.classList.add('occupied');
+  } else {
+    console.log('no-drop');
+  }
 }
 
 export function addDragDropListeners(tile) {
@@ -35,10 +40,6 @@ export function addDragStartListener() {
 
 export function addEventListeners() {
   addDragStartListener();
-  addDragDropListeners('.gridElem');
-  addDragDropListeners('.gridElemTripleWord');
-  addDragDropListeners('.gridElemDoubleWord');
-  addDragDropListeners('.gridElemDoubleLetter');
-  addDragDropListeners('.gridElemDoubleWord');
-  addDragDropListeners('.gridElemTripleLetter');
+  addDragDropListeners('.dropZoneTest');
+  addDragDropListeners('.dragGrid');
 }
