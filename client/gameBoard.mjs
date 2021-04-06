@@ -25,17 +25,14 @@ export function addGridTiles() {
       newElem.textContent = 'TW';
       newElem.id = `Tile${i}`;
     } else if (tripleLetter.includes(i)) {
-      newElem.class = 'gridElem';
       newElem.classList.add('gridElemTripleLetter');
       newElem.textContent = 'TL';
       newElem.id = `Tile${i}`;
     } else if (doubleWord.includes(i)) {
-      newElem.class = 'gridElem';
       newElem.classList.add('gridElemDoubleWord');
       newElem.textContent = 'DW';
       newElem.id = `Tile${i}`;
     } else if (doubleLetter.includes(i)) {
-      newElem.class = 'gridElem';
       newElem.classList.add('gridElemDoubleLetter');
       newElem.textContent = 'DL';
       newElem.id = `Tile${i}`;
@@ -45,4 +42,13 @@ export function addGridTiles() {
     }
     document.querySelector('.gridContainer').appendChild(newElem);
   }
+  const elem = document.createElement('div');
+  elem.className = 'belowBox';
+  elem.id = 'belowBox';
+  document.querySelector('.gridContainer').appendChild(elem);
+
+  // const innerDiv = document.createElement('div');
+  // innerDiv.id = 'innerDiv';
+  // innerDiv.className = 'innerDiv';
+  // document.querySelector('.belowBox').appendChild(innerDiv);
 }

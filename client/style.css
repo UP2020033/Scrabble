@@ -216,6 +216,7 @@
     .dragFbox {
         display: flex;
         margin: auto;
+        background-color: black;
         padding-bottom: 15px;
         height: 100px;
         width: 700px;
@@ -246,13 +247,13 @@
 
     .dragElem {
         outline: 1px solid black;
-        height: 70px;
-        width: 70px;
+        height: 45px;
+        width: 45px;
         background-color: #F2BF66;
         font-family: Calibri;
         text-align: center;
-        line-height: 70px;
-        font-size: 35px;
+        line-height: 45px;
+        font-size: 20px;
     }
 
     .gridOutliners {
@@ -374,7 +375,7 @@
         display: flex;
         margin: auto;
         padding-top: 50px;
-        height: 650px;
+        height: 600px;
         width: 650px;
         border-width: 0.5em;
     }
@@ -382,20 +383,40 @@
     .dragFbox {
         display: flex;
         margin: auto;
+        background-color: #84bae8;
         padding-bottom: 30px;
         height: 100px;
         width: 700px;
+        border-top: 1px solid black;
         border-width: 0.5em;
+    }
+
+    .belowBox {
+        display: flex;
+        margin: auto;
+        background-color: #84bae8;
+        padding-bottom: 30px;
+        height: 100px;
+        width: 600px;
+        border-width: 0.5em;
+        border: 1px solid black;
     }
 
     .gridContainer {
         display: grid;
-        margin: auto;
-        outline: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        /* outline: 1px solid black; */
+        border-bottom: solid white 50px;
         height: 600px;
         width: 600px;
         grid-template-columns: repeat(auto-fill, 40px);
         grid-template-rows: repeat(auto-fill, 40px);
+    }
+
+    .innerDiv {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .dragGrid {
@@ -410,13 +431,13 @@
 
     .dragElem {
         outline: 1px solid black;
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         background-color: #F2BF66;
         font-family: Calibri;
         text-align: center;
-        line-height: 60px;
-        font-size: 35px;
+        line-height: 40px;
+        font-size: 25px;
     }
 
     .gridElem {

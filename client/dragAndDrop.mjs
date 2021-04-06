@@ -6,12 +6,12 @@ export function dragStartHandler(e) {
 
 export function dragOverHandler(e) {
   e.preventDefault();
+  console.log(e.relatedTarget);
 }
 
 export function dropHandler(e) {
   const data = e.dataTransfer.getData('text/plain');
   const draggedElem = document.getElementById(data);
-  e.target.innerHTML = '';
   e.target.insertAdjacentElement('afterbegin', draggedElem);
 }
 

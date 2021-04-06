@@ -24,8 +24,8 @@ document.querySelector('.mainGridFbox').appendChild(gameBoard.addGrid('gridConta
 
 gameBoard.addGridTiles();
 
-document.querySelector('.mainSection').appendChild(gameBoard.addFlexBox('dragFbox'));
-document.querySelector('.dragFbox').appendChild(gameBoard.addGrid('dragGrid'));
+// document.querySelector('.mainSection').appendChild(gameBoard.addFlexBox('dragFbox'));
+document.querySelector('.belowBox').appendChild(gameBoard.addGrid('dragGrid'));
 
 addDragTiles.addStarterTiles();
 
