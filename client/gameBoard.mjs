@@ -22,19 +22,24 @@ export function addGridTiles() {
     const newElem = document.createElement('div');
     if (tripleWord.includes(i)) {
       newElem.classList.add('gridElemTripleWord');
-      newElem.textContent = 'TW';
+      newElem.classList.add('colourTile');
+      newElem.innerText = 'TW';
       newElem.id = `Tile${i}`;
+      newElem.setAttribute('unselectable', 'on');
     } else if (tripleLetter.includes(i)) {
       newElem.classList.add('gridElemTripleLetter');
-      newElem.textContent = 'TL';
+      newElem.classList.add('colourTile');
+      newElem.innerText = 'TL';
       newElem.id = `Tile${i}`;
     } else if (doubleWord.includes(i)) {
       newElem.classList.add('gridElemDoubleWord');
-      newElem.textContent = 'DW';
+      newElem.classList.add('colourTile');
+      newElem.innerText = 'DW';
       newElem.id = `Tile${i}`;
     } else if (doubleLetter.includes(i)) {
       newElem.classList.add('gridElemDoubleLetter');
-      newElem.textContent = 'DL';
+      newElem.classList.add('colourTile');
+      newElem.innerText = 'DL';
       newElem.id = `Tile${i}`;
     } else {
       newElem.classList.add('gridElem');

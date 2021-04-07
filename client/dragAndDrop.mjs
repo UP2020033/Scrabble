@@ -2,6 +2,11 @@
 export function dragStartHandler(e) {
   const data = e.target.id;
   e.dataTransfer.setData('text/plain', data);
+  if (e.target.parentElement.classList.contains('occupied')) {
+    e.target.parentElement.classList.remove('occupied');
+  } else {
+    console.log('no removal required');
+  }
 }
 
 export function dragOverHandler(e) {
@@ -9,6 +14,55 @@ export function dragOverHandler(e) {
   console.log(e.relatedTarget);
 }
 
+export function dragToDragged(elem) {
+  elem.classList.remove('dragElem');
+  elem.classList.add('draggedElem');
+}
+
+export function draggedToDrag(elem) {
+  elem.classList.remove('draggedElem');
+  elem.classList.add('dragElem');
+}
+
+export function dropHandler(e) {
+  if ((e.target.classList.contains('dragElem') !== true) && (e.target.classList.contains('occupied') !== true && e.target.parentElement.classList.contains('occupied') !== true)) {
+    const data = e.dataTransfer.getData('text/plain');
+    const draggedElem = document.getElementById(data);
+    e.target.append(draggedElem);
+    e.target.classList.add('occupied');
+    if (draggedElem.parentElement.classList.contains('colourTile')) {
+      dragToDragged(draggedElem);
+    } else if (draggedElem.parentElement.classList.contains('gridElem')) {
+      draggedToDrag(draggedElem);
+    } else if (draggedElem.parentElement.classList.contains('dragGrid')) {
+      draggedToDrag(draggedElem);
+    } else console.log('no-drop');
+  }
+}
+
+/*
+export function dropHandler(e) {
+  if ((e.target.classList.contains('dragElem') !== true) && (e.target.classList.contains('occupied') !== true)) {
+  // ((e.target.parentNode.classList.contains('dragElem') !== true) || (e.target.classList.contains('occupied'))) {
+    const data = e.dataTransfer.getData('text/plain');
+    const draggedElem = document.getElementById(data);
+    e.target.append(draggedElem);
+    e.target.classList.add('occupied');
+    if (draggedElem.parentElement.classList.contains('colourTile')) {
+      dragToDragged(draggedElem);
+    } else if (draggedElem.parentElement.classList.contains('gridElem')) {
+      draggedToDrag(draggedElem);
+    } else if (draggedElem.parentElement.classList.contains('dragGrid')) {
+      draggedToDrag(draggedElem);
+    } else {
+      console.log('no-drop');
+    }
+  } else console.log('no-drop');
+}
+*/
+
+
+/*
 export function dropHandler(e) {
   if ((e.target.classList.contains('dragElem') !== true) || (e.target.classList.contains('occupied'))) {
     const data = e.dataTransfer.getData('text/plain');
@@ -19,7 +73,7 @@ export function dropHandler(e) {
     console.log('no-drop');
   }
 }
-
+*/
 export function addDragDropListeners(tile) {
   const dropZones = document.querySelectorAll(tile);
   for (const dropZone of dropZones) {
@@ -43,3 +97,8 @@ export function addEventListeners() {
   addDragDropListeners('.dropZoneTest');
   addDragDropListeners('.dragGrid');
 }
+/*
+export function removeEventListeners(element) {
+  if (element.classList.)
+}
+*/

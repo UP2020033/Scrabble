@@ -76,7 +76,6 @@
 
     .dragGrid {
         display: grid;
-        margin: auto;
         padding-top: 30px;
         column-gap: 2px;
         height: 80px;
@@ -87,12 +86,26 @@
 
     .dragElem {
         outline: 1px solid black;
-        height: 85px;
-        width: 85px;
+        height: 60px;
+        width: 60px;
         background-color: #F2BF66;
         font-family: Calibri;
         text-align: center;
-        line-height: 85px;
+        line-height: 60px;
+        font-size: 35px;
+    }
+    
+    .draggedElem {
+        position: relative;
+        bottom: 60px;
+        z-index: 3;
+        outline: 1px solid black;
+        height: 60px;
+        width: 60px;
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 60px;
         font-size: 35px;
     }
 
@@ -256,6 +269,20 @@
         font-size: 20px;
     }
 
+    .draggedElem {
+        position: relative;
+        bottom: 45px;
+        z-index: 3;
+        outline: 1px solid black;
+        height: 45px;
+        width: 45px;
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 45px;
+        font-size: 20px;
+    }
+
     .gridOutliners {
         outline: 1px solid black;
         height: 45px;
@@ -323,8 +350,11 @@
         text-align: center;
         line-height: 45px;
     }
-}
 
+    #tileButton {
+        position: relative;
+        margin: auto;
+}
 
 @media (min-width: 800px) and (max-width: 1200px) {
 
@@ -510,8 +540,6 @@
         margin-right: auto;
         clear: both;
     }
-}
-
 
 
 /* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */
