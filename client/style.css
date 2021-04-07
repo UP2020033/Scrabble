@@ -354,6 +354,7 @@
     #tileButton {
         position: relative;
         margin: auto;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
@@ -441,11 +442,6 @@
         width: 600px;
         grid-template-columns: repeat(auto-fill, 40px);
         grid-template-rows: repeat(auto-fill, 40px);
-    }
-
-    .innerDiv {
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .dragGrid {
@@ -540,7 +536,7 @@
         margin-right: auto;
         clear: both;
     }
-
+}
 
 /* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */
 /* https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/ */
