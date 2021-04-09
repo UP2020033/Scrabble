@@ -26,7 +26,8 @@ gameBoard.addGridTiles();
 
 document.querySelector('.belowBox').appendChild(gameBoard.addGrid('dragGrid'));
 
-game.addStarterTiles();
+
+game.addNewTiles();
 
 gameBoard.addButton('Play', 'tilePlay');
 gameBoard.addButton('Skip', 'tileSkip');
@@ -34,5 +35,9 @@ gameBoard.addButton('Restart', 'tileRestart');
 
 const skipButton = document.querySelector('#tileSkip');
 skipButton.addEventListener('click', game.skipTurn);
+
+const playButton = document.querySelector('#tilePlay');
+playButton.addEventListener('click', game.playTurn);
+
 
 dragAndDrop.addEventListeners();

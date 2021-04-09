@@ -74,10 +74,17 @@
         grid-template-rows: repeat(auto-fill, 60px);
     }
 
+    .belowBox {
+        outline: 1px solid black;
+        width: 900px;
+        margin-top: 10px;
+        background-color: #347aeb;
+    }
+
     .dragGrid {
         display: grid;
         padding-top: 30px;
-        column-gap: 2px;
+        column-gap: 40px;
         height: 80px;
         width: 900px;
         grid-template-columns: repeat(7, 100px);
@@ -171,9 +178,9 @@
         line-height: 60px;
     }
 
-    #tileButton {
-        position: relative;
-        margin: auto;
+    .gameButton {
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
@@ -252,6 +259,13 @@
         grid-template-rows: repeat(auto-fill, 45px);
     }
 
+    .belowBox {
+        outline: 1px solid black;
+        width: 675px;
+        margin-top: 10px;
+        background-color: #347aeb;
+    }
+
     .dragGrid {
         display: grid;
         margin: auto;
@@ -306,7 +320,7 @@
         height: 45px;
         width: 45px;
         background-color: #E6B7ED;
-        font-size: 35px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
@@ -317,7 +331,7 @@
         height: 45px;
         width: 45px;
         background-color: #FFC0CB;
-        font-size: 30px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
@@ -328,7 +342,7 @@
         height: 45px;
         width: 45px;
         background-color: #20B2AA;
-        font-size: 30px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
@@ -339,7 +353,7 @@
         height: 45px;
         width: 45px;
         background-color: #ADD8E6;
-        font-size: 30px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
@@ -350,7 +364,7 @@
         height: 45px;
         width: 45px;
         background-color: #E6B7ED;
-        font-size: 30px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
@@ -361,15 +375,14 @@
         height: 45px;
         width: 45px;
         background-color: #88B6EB;
-        font-size: 30px;
+        font-size: 25px;
         font-family: Calibri;
         text-align: center;
         line-height: 45px;
     }
 
-    #tileButton {
-        position: relative;
-        margin: auto;
+    .gameButton {
+        margin-left: 10px;
     }
 }
 
@@ -453,12 +466,13 @@
         outline: 1px solid black;
         width: 600px;
         margin-top: 10px;
+        background-color: #347aeb;
     }
     .dragGrid {
         display: grid;
         margin-top: 10px;
         padding-top: 10px;
-        column-gap: 50px;
+        column-gap: 53px;
         height: 80px;
         width: 600px;
         grid-template-columns: repeat(7, 40px);
@@ -496,6 +510,7 @@
         height: 40px;
         width: 40px;
         background-color: white;
+        justify-content: center;
     }
 
     .gridElemStartWord {
@@ -563,9 +578,6 @@
         text-align: center;
         line-height: 35px;
     }
-
-    .buttons
-
 }
 
 /* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */
