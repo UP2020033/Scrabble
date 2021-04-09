@@ -11,7 +11,6 @@ export function dragStartHandler(e) {
 
 export function dragOverHandler(e) {
   e.preventDefault();
-  console.log(e.relatedTarget);
 }
 
 export function dragToDragged(elem) {

@@ -115,23 +115,23 @@
         width: 60px;
         background-color: white;
     }
+
+    .gridElemStartWord {
+        outline: 1px solid black;
+        height: 60px;
+        width: 60px;
+        background-color: #E6B7ED;
+        font-size: 35px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 60px;
+        }
     
     .gridElemTripleWord {
         outline: 1px solid black;
         height: 60px;
         width: 60px;
         background-color: #FFC0CB;
-        font-size: 35px;
-        font-family: Calibri;
-        text-align: center;
-        line-height: 60px;
-    }
-
-    .gridElemDoubleWord {
-        outline: 1px solid black;
-        height: 60px;
-        width: 60px;
-        background-color: #20B2AA;
         font-size: 35px;
         font-family: Calibri;
         text-align: center;
@@ -169,6 +169,11 @@
         font-family: Calibri;
         text-align: center;
         line-height: 60px;
+    }
+
+    #tileButton {
+        position: relative;
+        margin: auto;
     }
 }
 
@@ -295,6 +300,17 @@
         width: 45px;
         background-color: white;
     }
+
+    .gridElemStartWord {
+        outline: 1px solid black;
+        height: 45px;
+        width: 45px;
+        background-color: #E6B7ED;
+        font-size: 35px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 45px;
+        }
     
     .gridElemTripleWord {
         outline: 1px solid black;
@@ -422,22 +438,11 @@
         border-width: 0.5em;
     }
 
-    .belowBox {
-        display: flex;
-        margin: auto;
-        background-color: #84bae8;
-        padding-bottom: 30px;
-        height: 100px;
-        width: 600px;
-        border-width: 0.5em;
-        border: 1px solid black;
-    }
-
     .gridContainer {
         display: grid;
         margin-left: auto;
         margin-right: auto;
-        border-bottom: solid white 50px;
+        outline: 1px solid black;
         height: 600px;
         width: 600px;
         grid-template-columns: repeat(auto-fill, 40px);
@@ -446,15 +451,14 @@
 
     .dragGrid {
         display: grid;
-        float: left;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        column-gap: 52px;
-        height: 40px;
-        width: 100%;
-        grid-template-columns: repeat(7, 40px);
-        grid-template-rows: repeat(auto-fill, 40px);
+        margin-top: 10px;
+        padding-top: 10px;
+        column-gap: 2px;
+        height: 80px;
+        width: 600px;
+        grid-template-columns: repeat(7, 85px);
+        grid-template-rows: repeat(auto-fill, 85px);
+        background-color: #84bae8;
     }
 
     .dragElem {
@@ -468,12 +472,37 @@
         font-size: 25px;
     }
 
+    .draggedElem {
+        position: relative;
+        bottom: 35px;
+        z-index: 3;
+        outline: 1px solid black;
+        height: 40px;
+        width: 40px;
+        background-color: #F2BF66;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
+        font-size: 25px;
+    }
+
     .gridElem {
         outline: 1px solid black;
         height: 40px;
         width: 40px;
         background-color: white;
     }
+
+    .gridElemStartWord {
+        outline: 1px solid black;
+        height: 40px;
+        width: 40px;
+        background-color: #E6B7ED;
+        font-size: 25px;
+        font-family: Calibri;
+        text-align: center;
+        line-height: 35px;
+        }
     
     .gridElemTripleWord {
         outline: 1px solid black;
@@ -531,7 +560,6 @@
     }
 
     #tileButton {
-        margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         clear: both;
