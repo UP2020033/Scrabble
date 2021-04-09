@@ -1,7 +1,7 @@
 import * as gameBoard from './gameBoard.mjs';
-import * as addDragTiles from './addDragTiles.mjs';
 import * as dragAndDrop from './dragAndDrop.mjs';
 import * as addNav from './addNav.mjs';
+import * as game from './game.mjs';
 
 document.querySelector('.mainSection').appendChild(addNav.addNavDiv());
 document.querySelector('#navBar').appendChild(addNav.addNavDivContainer());
@@ -26,8 +26,13 @@ gameBoard.addGridTiles();
 
 document.querySelector('.belowBox').appendChild(gameBoard.addGrid('dragGrid'));
 
-addDragTiles.addStarterTiles();
+game.addStarterTiles();
 
-gameBoard.addButton('tileButton');
+gameBoard.addButton('Play', 'tilePlay');
+gameBoard.addButton('Skip', 'tileSkip');
+gameBoard.addButton('Restart', 'tileRestart');
+
+const skipButton = document.querySelector('#tileSkip');
+skipButton.addEventListener('click', game.skipTurn);
 
 dragAndDrop.addEventListeners();

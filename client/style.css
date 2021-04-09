@@ -449,15 +449,20 @@
         grid-template-rows: repeat(auto-fill, 40px);
     }
 
+    .belowBox {
+        outline: 1px solid black;
+        width: 600px;
+        margin-top: 10px;
+    }
     .dragGrid {
         display: grid;
         margin-top: 10px;
         padding-top: 10px;
-        column-gap: 2px;
+        column-gap: 50px;
         height: 80px;
         width: 600px;
-        grid-template-columns: repeat(7, 85px);
-        grid-template-rows: repeat(auto-fill, 85px);
+        grid-template-columns: repeat(7, 40px);
+        grid-template-rows: repeat(auto-fill, 40px);
         background-color: #84bae8;
     }
 
@@ -559,11 +564,8 @@
         line-height: 35px;
     }
 
-    #tileButton {
-        margin-left: auto;
-        margin-right: auto;
-        clear: both;
-    }
+    .buttons
+
 }
 
 /* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */

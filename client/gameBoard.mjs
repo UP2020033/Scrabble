@@ -60,9 +60,10 @@ export function addGridTiles() {
   document.querySelector('.gridContainer').appendChild(elem);
 }
 
-export function addButton(id) {
+export function addButton(buttonName, id) {
   const tileButton = document.createElement('button');
-  tileButton.innerText = 'Next turn';
+  tileButton.innerText = buttonName;
+  tileButton.className = 'gameButton';
   tileButton.id = id;
   document.querySelector('.belowBox').appendChild(tileButton);
 }
