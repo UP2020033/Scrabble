@@ -35,12 +35,14 @@ export function addNewTiles() {
   }
 }
 
-export function skipTurn() {
+export function removeWhitePlacedTiles() {
   const dragTiles = document.querySelector('.dragGrid');
   while (dragTiles.firstChild) {
     dragTiles.removeChild(dragTiles.firstChild);
   }
-  addStarterTiles();
+}
+
+export function removeSpecialPlacedTiles() {
   const mainBoard = document.querySelector('.gridContainer');
   const onBoardTiles = mainBoard.children;
   for (let i = 0; i < onBoardTiles.length; i++) {
@@ -51,4 +53,19 @@ export function skipTurn() {
     }
   }
 }
+
+export function removeOccupiedStatus() {
+  const gameBoard = document.querySelector('.gridContainer');
+  for (let i = 0; i < gameBoard.children.length; i++) {
+    gameBoard.children[i].classList.remove('occupied');
+  }
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+
+export function skipTurn() {
+  removeWhitePlacedTiles();
+  addStarterTiles();
+  removeSpecialPlacedTiles();
+  removeOccupiedStatus();
+}
