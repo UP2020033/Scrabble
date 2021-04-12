@@ -7,17 +7,8 @@ document.querySelector('.mainSection').appendChild(addNav.addNavDiv());
 document.querySelector('#navBar').appendChild(addNav.addNavDivContainer());
 
 document.querySelector('.navContainer').appendChild(addNav.addNavButton('navRules'));
-document.querySelector('#navRules').appendChild(addNav.addNavAnchor('Rules', 'test.com'));
-
-/*
-function addHeader(title) {
-  const newHeader = document.createElement('h1');
-  newHeader.textContent = title;
-  return newHeader;
-}
-
-document.querySelector('.mainHeader').appendChild(addHeader('ScrabbleGame'));
-*/
+document.querySelector('.navContainer').appendChild(addNav.addNavItem('Score:', 'navScore'));
+document.querySelector('#navRules').appendChild(addNav.addNavAnchor('Scrabble', 'test.com'));
 
 document.querySelector('.mainSection').appendChild(gameBoard.addFlexBox('mainGridFbox'));
 document.querySelector('.mainGridFbox').appendChild(gameBoard.addGrid('gridContainer'));
@@ -26,18 +17,15 @@ gameBoard.addGridTiles();
 
 document.querySelector('.belowBox').appendChild(gameBoard.addGrid('dragGrid'));
 
-
 game.addNewTiles();
 
 gameBoard.addButton('Play', 'tilePlay');
 gameBoard.addButton('Skip', 'tileSkip');
-gameBoard.addButton('Restart', 'tileRestart');
 
 const skipButton = document.querySelector('#tileSkip');
 skipButton.addEventListener('click', game.skipTurn);
 
 const playButton = document.querySelector('#tilePlay');
 playButton.addEventListener('click', game.playTurn);
-
 
 dragAndDrop.addEventListeners();

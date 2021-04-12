@@ -27,3 +27,10 @@ export function addNavAnchor(text, link) {
   navAnchor.className = 'anchorClass';
   return navAnchor;
 }
+
+export function addNavItem(text, className) {
+  const navItem = document.createElement('div');
+  navItem.innerText = text;
+  navItem.className = className;
+  return navItem;
+}
