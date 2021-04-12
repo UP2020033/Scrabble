@@ -92,20 +92,11 @@ for (let i = 0; i < 15; i++) {
   allLetters.push(row);
 }
 
-function removeElement(arr, elem) {
-  const index = arr.indexOf(elem)
-  if (index > -1) {
-    arr.splice(index, 1);
-  }
-}
-
-
-
 export function playTurn() {
-  let allTileArr = [];
-  let allTiles = document.querySelector('.gridContainer');
+  const allTileArr = [];
+  const allTiles = document.querySelector('.gridContainer');
   let col = [];
-  let complete2DArr = [];
+  const complete2DArr = [];
 
 
   for (let j = 0; j < allTiles.childNodes.length; j++) {
@@ -130,6 +121,6 @@ export function playTurn() {
     complete2DArr.push(col);
     col = [];
   }
-  console.log(allLetters);
+  console.log(complete2DArr);
   addNewTiles();
 }
