@@ -43,7 +43,7 @@ export function addNewTiles() {
     if (dragGrid.children.length < 7) {
       addNewTile();
     } else {
-      console.log('No tile required');
+    //  console.log('No tile required');
     }
   }
 }
@@ -88,11 +88,11 @@ export function skipTurn() {
 
 export const allLetters = [];
 for (let i = 0; i < 15; i++) {
-  const row = [];
-  allLetters.push(row);
+  const allLettersArr = [];
+  allLetters.push(allLettersArr);
 }
 
-export function playTurn() {
+export function completeArray() {
   const allTileArr = [];
   const allTiles = document.querySelector('.gridContainer');
   let col = [];
@@ -121,6 +121,57 @@ export function playTurn() {
     complete2DArr.push(col);
     col = [];
   }
-  console.log(complete2DArr);
-  addNewTiles();
 }
+
+export function playTurn() {
+  const allTileArr = [];
+  const allTiles = document.querySelector('.gridContainer');
+  let col = [];
+  const complete2DArr = [];
+
+
+  for (let j = 0; j < allTiles.childNodes.length; j++) {
+  // row.push(allTiles.childNodes[j].childNodes);
+    if (allTiles.hasChildNodes === true) {
+      allTileArr.push(allTiles.childNodes[j].childNodes[0].textContent);
+    } else {
+      allTileArr.push(allTiles.childNodes[j].textContent);
+    }
+  }
+  let count = 0;
+
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < 15; j++) {
+      if (count < allTileArr.length) {
+        col.push(allTileArr[count]);
+        count += 1;
+      } else {
+        continue;
+      }
+    }
+    complete2DArr.push(col);
+    col = [];
+  }
+  let columnCheck = [];
+  const rowCheck = [];
+
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < 15; j++) {
+      columnCheck = { column: complete2DArr.coord.split('')[j], row: complete2DArr.split[i] };
+      rowCheck = { row: complete2DArr.coord.split('')[i], row: complete2DArr.split[j] };
+      console.log(complete2DArr[j][i]);
+    }
+    addNewTiles();
+  }
+}
+
+/*
+export function getLettersByColumn() {
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < 15; j++) {
+      if (j === i) {
+      }
+    }
+  }
+}
+*/
