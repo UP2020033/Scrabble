@@ -154,7 +154,7 @@ export function playTurn() {
   }
   let columnCheck = [];
   const rowCheck = [];
-
+/*
   for (let i = 0; i < 15; i++) {
     for (let j = 0; j < 15; j++) {
       columnCheck = { column: complete2DArr.coord.split('')[j], row: complete2DArr.split[i] };
@@ -163,6 +163,7 @@ export function playTurn() {
     }
     addNewTiles();
   }
+  */
 }
 
 /*
