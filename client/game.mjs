@@ -1,4 +1,6 @@
 
+// Function which returns random letter based on the Arr index.
+
 export function addRandomLetter() {
   const dragTiles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
     'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -8,6 +10,8 @@ export function addRandomLetter() {
 
 // Get a random item from a JavaScript array. Stack Overflow.
 // (2021). Retrieved 5 April 2021, from https://stackoverflow.com/questions/5915096/get-a-random-item-from-a-javascript-array/5915122#5915122.
+
+// Array of ids to be assigned to the draggable tiles - Should probably make it an automated process.
 
 const dragIdArr = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15',
   'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10', 'B11', 'B12', 'B13', 'B14', 'B15',
@@ -21,15 +25,21 @@ const dragIdArr = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 
   'J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'J7', 'J8', 'J9', 'J10', 'J11', 'J12', 'J13', 'J14', 'J15',
   'K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'J11', 'K12', 'K13', 'K14', 'K15'];
 
+// Function to add new draggable tile, this will be called upon by other functions when the user presses buttons to either play or reset a turn.
+
 export function addNewTile() {
   const newTile = document.createElement('div');
   newTile.classList.add('dragElem');
   newTile.textContent = addRandomLetter();
+  // Assiging the tile an id consisting of the first property in the array.
   newTile.id = `dragTile${dragIdArr[0]}`;
   newTile.draggable = true;
+  // Removing the first property in the array each time the function is called.
   dragIdArr.shift(dragIdArr[0]);
   document.querySelector('.dragGrid').appendChild(newTile);
 }
+
+// Function calling the previous addNewTile function to create the first 7 draggable tiles.
 
 export function addStarterTiles() {
   for (let i = 0; i < 7; i++) {
@@ -37,16 +47,20 @@ export function addStarterTiles() {
   }
 }
 
+// Function calling the addNewTile function to add new tiles when the user skips a turn.
+
 export function addNewTiles() {
   const dragGrid = document.querySelector('.dragGrid');
   for (let i = 0; i < 7; i++) {
     if (dragGrid.children.length < 7) {
       addNewTile();
     } else {
-    //  console.log('No tile required');
+      console.log('No tile required');
     }
   }
 }
+
+// Function to remove the tiles from the non-special tiles (white tiles with no letters) when the user skips a turn.
 
 export function removeNonSpecialTiles() {
   const dragTiles = document.querySelector('.dragGrid');
@@ -57,19 +71,36 @@ export function removeNonSpecialTiles() {
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
 
+/*
+I had issues with drag and drop with CSS, whereby when I dropped onto special squares, the dropped tile would display below the square it needed to be in.
+The dropped tile was in fact displaying below the textContent within the special square.
+I came up with the solution of separating the tiles into numerous classes (the special tiles having more than one class, which is probably not optimal)..
+
+The removeSpecialPlacedTiles function loops through the board and finds the special squares that have been occupied by a dropped tile, and removes the tile.
+*/
+
 export function removeSpecialPlacedTiles() {
   const mainBoard = document.querySelector('.gridContainer');
   const onBoardTiles = mainBoard.children;
   for (let i = 0; i < onBoardTiles.length; i++) {
+    // Checks for a childNode and checks to see if the classList of the grid tile does not contain the colourTile or belowBox tile.
     if (onBoardTiles[i].hasChildNodes() && !onBoardTiles[i].classList.contains('colourTile') && !onBoardTiles[i].classList.contains('belowBox')) {
       onBoardTiles[i].removeChild(onBoardTiles[i].firstChild);
+    // Checks to see if the tile has numerous children, which would imply the tile is occupied by a draggable tile.
     } else if (onBoardTiles[i].children.length > 0 && onBoardTiles[i].classList.contains('colourTile')) {
+      // Removes the last tile, which would be the dragged tile.
       onBoardTiles[i].removeChild(onBoardTiles[i].lastChild);
     }
   }
 }
 
 // https://stackoverflow.com/questions/2161634/how-to-check-if-element-has-any-children-in-javascript
+
+/*
+Function to remove the occupied classList, which was added in cohesion with the problem I mentioned in the comment spanning lines 74-80
+The occupied class is added when a drop occurs, this is to prevent any further dropping on that tile. This means that when the user skips the turn,
+the occupied must be removed when the user skips, otherwise the tile will never be able to be dropped on again.
+*/
 
 export function removeOccupiedStatus() {
   const gameBoard = document.querySelector('.gridContainer');
@@ -78,6 +109,11 @@ export function removeOccupiedStatus() {
   }
 }
 
+/* 
+The skipTurn function invokes the functions created previously to perform essentially perform a skip turn, by removing all the tiles on the board,
+adding new tiles to the draggable tile area and removing the occupied status.
+When playTurn works, I will need to make sure I no longer remove all tiles, but only the tiles in the current turn.
+*/
 
 export function skipTurn() {
   removeNonSpecialTiles();
@@ -86,43 +122,8 @@ export function skipTurn() {
   removeOccupiedStatus();
 }
 
-export const allLetters = [];
-for (let i = 0; i < 15; i++) {
-  const allLettersArr = [];
-  allLetters.push(allLettersArr);
-}
-
-export function completeArray() {
-  const allTileArr = [];
-  const allTiles = document.querySelector('.gridContainer');
-  let col = [];
-  const complete2DArr = [];
-
-
-  for (let j = 0; j < allTiles.childNodes.length; j++) {
-    // row.push(allTiles.childNodes[j].childNodes);
-    if (allTiles.hasChildNodes === true) {
-      allTileArr.push(allTiles.childNodes[j].childNodes[0].textContent);
-    } else {
-      allTileArr.push(allTiles.childNodes[j].textContent);
-    }
-  }
-  let count = 0;
-
-  for (let i = 0; i < 15; i++) {
-    for (let j = 0; j < 15; j++) {
-      if (count < allTileArr.length) {
-        col.push(allTileArr[count]);
-        count += 1;
-      } else {
-        continue;
-      }
-    }
-    complete2DArr.push(col);
-    col = [];
-  }
-}
-
+/* The 
+*/
 export function playTurn() {
   const allTileArr = [];
   const allTiles = document.querySelector('.gridContainer');
@@ -152,9 +153,7 @@ export function playTurn() {
     complete2DArr.push(col);
     col = [];
   }
-  let columnCheck = [];
-  const rowCheck = [];
-/*
+  /*
   for (let i = 0; i < 15; i++) {
     for (let j = 0; j < 15; j++) {
       columnCheck = { column: complete2DArr.coord.split('')[j], row: complete2DArr.split[i] };
@@ -164,7 +163,9 @@ export function playTurn() {
     addNewTiles();
   }
   */
+  console.log(complete2DArr);
 }
+
 
 /*
 export function getLettersByColumn() {
