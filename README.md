@@ -3,6 +3,5 @@
 
 Run 
 ```bash
-npm run setup
 npm start
 ```
