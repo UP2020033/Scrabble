@@ -1,9 +1,11 @@
+
 /*
 DragStart handler, adapted from Rich's code (referenced on line 58)
 Adjusted event to event target
 Added an if statement to remove the classList of 'occupied' on dragStart if it is existent,
 this is to remove occupied class when the dragStart occurs on a tile that has already been dropped on the grid
 */
+
 export function dragStartHandler(e) {
   const data = e.target.id;
   e.dataTransfer.setData('text/plain', data);

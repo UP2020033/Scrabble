@@ -109,7 +109,7 @@ export function removeOccupiedStatus() {
   }
 }
 
-/* 
+/*
 The skipTurn function invokes the functions created previously to perform essentially perform a skip turn, by removing all the tiles on the board,
 adding new tiles to the draggable tile area and removing the occupied status.
 When playTurn works, I will need to make sure I no longer remove all tiles, but only the tiles in the current turn.
@@ -122,8 +122,12 @@ export function skipTurn() {
   removeOccupiedStatus();
 }
 
-/* The 
+/*
+The playTurn function is the function that will perform the word recognition and potentially scoring.
+Currently I have an array of arrays that returns the boards current status of letters on the grid, including drag and dropped tiles.
+I am struggling to envision how to recognise the words however, it seems like I need to search by columns and rows and compare between.
 */
+
 export function playTurn() {
   const allTileArr = [];
   const allTiles = document.querySelector('.gridContainer');

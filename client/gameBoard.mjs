@@ -87,3 +87,16 @@ export function addButton(buttonName, id) {
   tileButton.id = id;
   document.querySelector('.belowBox').appendChild(tileButton);
 }
+
+// Function to append board so it displays to the user, looks better than using querySelector in the index.mjs file.
+
+export function addBoard() {
+  document.querySelector('.mainSection').appendChild(addFlexBox('mainGridFbox'));
+  document.querySelector('.mainGridFbox').appendChild(addGrid('gridContainer'));
+}
+
+// Again, function to add the dragBoard instead of including querySelectors in the index.mjs file.
+
+export function addDragBoard() {
+  document.querySelector('.belowBox').appendChild(addGrid('dragGrid'));
+}

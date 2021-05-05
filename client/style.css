@@ -38,14 +38,14 @@
     }
 
     .navScore {
-            text-decoration: none;
-            color: black;
-            margin: 0 70px;
-            margin-left: 50%;
-            margin-right: 50%;
-            font-family: Calibri;
-            font-size: 20px;
-            width: 100px;
+        text-decoration: none;
+        color: black;
+        margin: 0 70px;
+        margin-left: 50%;
+        margin-right: 50%;
+        font-family: Calibri;
+        font-size: 20px;
+        width: 100px;
         }
 
     .mainGridFbox {
@@ -609,8 +609,10 @@
     }
 }
 
-/* https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 */
-/* https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/ */
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-/* https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/ */
-/* https://web.dev/optimize-css-background-images-with-media-queries/ */
+/* CSS flexboxes and grid research was required, I used the below webistes to help understand and implement them:
+https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 
+https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/
+https://web.dev/optimize-css-background-images-with-media-queries/
+*/
