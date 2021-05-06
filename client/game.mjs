@@ -157,12 +157,68 @@ export function playTurn() {
       if (complete2DArr[i][j] === 'TW' || complete2DArr[i][j] === 'DL' || complete2DArr[i][j] === 'TL' || complete2DArr[i][j] === 'DW' || complete2DArr[i][j] === '★' || complete2DArr[i][j] === '') {
         console.log('No letter identified');
       } else {
-        findIntersectingWord(complete2DArr[i][j]);
+        findIntersectingWords(i, j);
       }
     }
   }
   console.log(complete2DArr);
 
+  function findIntersectingWords(row, column) {
+    // Horizontal word
+    const horizontalWord = [];
+    for (let i = column; i >= 0; i--) {
+      const tileText = complete2DArr[row][i];
+      if (tileText.length !== 2 && tileText.length !== 0) {
+        // Tile has a letter, add it to the array
+        horizontalWord.push(tileText.slice(-1));
+        // console.log(horizontalWord);
+      } else {
+        break;
+      }
+    }
+
+    horizontalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point
+
+    for (let i = column + 1; i < complete2DArr[row].length; i++) {
+      const tileText = complete2DArr[row][i];
+      if (tileText.length !== 2 && tileText.length !== 0) {
+        // Tile has a letter
+        horizontalWord.push(tileText.slice(-1));
+        console.log(horizontalWord);
+      } else {
+        break;
+      }
+    }
+
+    // Vertical word
+    const verticalWord = [];
+    for (let i = row; i >= 0; i--) {
+      const tileText = complete2DArr[i][column];
+      if (tileText.length !== 2 && tileText.length !== 0) {
+        // Tile has a letter, add it to the array
+        verticalWord.push(tileText.slice(-1));
+        // console.log(verticalWord);
+      } else {
+        break;
+      }
+    }
+
+    verticalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point
+
+    for (let i = row + 1; i < complete2DArr.length; i++) {
+      const tileText = complete2DArr[i][column];
+      if (tileText.length !== 2 && tileText.length !== 0) {
+        // Tile has a letter
+        verticalWord.push(tileText.slice(-1));
+        console.log(verticalWord);
+      } else {
+        break;
+      }
+    }
+
+    return [verticalWord, horizontalWord];
+  }
+  /*
   function findIntersectingWord(position) {
     if (position.length > 1) {
       const stringArr = position.split('');
@@ -175,6 +231,7 @@ export function playTurn() {
 
     }
   }
+  */
 }
 
 
