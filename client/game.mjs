@@ -168,7 +168,7 @@ export function playTurn() {
     const horizontalWord = [];
     for (let i = column; i >= 0; i--) {
       const tileText = complete2DArr[row][i];
-      if (tileText.length !== 2 && tileText.length !== 0) {
+      if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter, add it to the array
         horizontalWord.push(tileText.slice(-1));
         // console.log(horizontalWord);
@@ -181,10 +181,10 @@ export function playTurn() {
 
     for (let i = column + 1; i < complete2DArr[row].length; i++) {
       const tileText = complete2DArr[row][i];
-      if (tileText.length !== 2 && tileText.length !== 0) {
+      if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter
         horizontalWord.push(tileText.slice(-1));
-        console.log(horizontalWord);
+        console.log(horizontalWord.join(''));
       } else {
         break;
       }
@@ -194,7 +194,7 @@ export function playTurn() {
     const verticalWord = [];
     for (let i = row; i >= 0; i--) {
       const tileText = complete2DArr[i][column];
-      if (tileText.length !== 2 && tileText.length !== 0) {
+      if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter, add it to the array
         verticalWord.push(tileText.slice(-1));
         // console.log(verticalWord);
@@ -207,17 +207,19 @@ export function playTurn() {
 
     for (let i = row + 1; i < complete2DArr.length; i++) {
       const tileText = complete2DArr[i][column];
-      if (tileText.length !== 2 && tileText.length !== 0) {
+      if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter
         verticalWord.push(tileText.slice(-1));
-        console.log(verticalWord);
+        console.log(verticalWord.join(''));
       } else {
         break;
       }
     }
 
-    return [verticalWord, horizontalWord];
+    return [verticalWord.join(''), horizontalWord.join()];
   }
+
+
   /*
   function findIntersectingWord(position) {
     if (position.length > 1) {
