@@ -127,7 +127,7 @@ export function playTurn() {
   const allTiles = document.querySelector('.gridContainer');
   let col = [];
   const complete2DArr = [];
-
+  const wordExists = [];
 
   for (let j = 0; j < allTiles.childNodes.length; j++) {
   // row.push(allTiles.childNodes[j].childNodes);
@@ -157,21 +157,22 @@ export function playTurn() {
       if (complete2DArr[i][j] === 'TW' || complete2DArr[i][j] === 'DL' || complete2DArr[i][j] === 'TL' || complete2DArr[i][j] === 'DW' || complete2DArr[i][j] === '★' || complete2DArr[i][j] === '') {
         console.log('No letter identified');
       } else {
-        findIntersectingWords(i, j);
+        validWord(findHorizontalWords(i, j));
+        validWord(findVerticalWords(i, j));
       }
     }
   }
   console.log(complete2DArr);
 
-  function findIntersectingWords(row, column) {
+  function findHorizontalWords(row, column) {
     // Horizontal word
-    const horizontalWord = [];
+    let horizontalWord = [];
     for (let i = column; i >= 0; i--) {
       const tileText = complete2DArr[row][i];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter, add it to the array
         horizontalWord.push(tileText.slice(-1));
-        // console.log(horizontalWord);
+        // console.log(horizontalWord.join(''));
       } else {
         break;
       }
@@ -189,15 +190,19 @@ export function playTurn() {
         break;
       }
     }
+    horizontalWord = horizontalWord.join('');
+    return horizontalWord;
+  }
 
+  function findVerticalWords(row, column) {
     // Vertical word
-    const verticalWord = [];
+    let verticalWord = [];
     for (let i = row; i >= 0; i--) {
       const tileText = complete2DArr[i][column];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
         // Tile has a letter, add it to the array
         verticalWord.push(tileText.slice(-1));
-        // console.log(verticalWord);
+        // console.log(verticalWord.join(''));
       } else {
         break;
       }
@@ -215,35 +220,23 @@ export function playTurn() {
         break;
       }
     }
-
-    return [verticalWord.join(''), horizontalWord.join()];
+    verticalWord = verticalWord.join('');
+    return verticalWord;
   }
 
+  async function validWord(word) {
+    const checkURL = 'https://dictionary-dot-sse-2020.nw.r.appspot.com/' + word;
+    const response = await fetch(checkURL);
 
-  /*
-  function findIntersectingWord(position) {
-    if (position.length > 1) {
-      const stringArr = position.split('');
-      const letter = position[2];
-      console.log(letter);
-    } else {
-      console.log(position);
-    }
-    for (let i = ; i > 0; i--) {
-
-    }
-  }
-  */
-}
-
-
-/*
-export function getLettersByColumn() {
-  for (let i = 0; i < 15; i++) {
-    for (let j = 0; j < 15; j++) {
-      if (j === i) {
-      }
+    if (wordExists.includes(word)) {
+      console.log(`${word} has already been used`);
+    } else if (response.status === 200 && !wordExists.includes(word)) {
+      console.log(`${word} is a valid word!`);
+      wordExists.push(word);
+    } else if (response.status === 400) {
+      console.log('This is not a valid word');
+    } else if (response.status === 404) {
+      console.log('This is not a valid word');
     }
   }
 }
-*/
