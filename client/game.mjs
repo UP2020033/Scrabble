@@ -116,18 +116,16 @@ export function skipTurn() {
   removeOccupiedStatus();
 }
 
-/*
-The playTurn function is the function that will perform the word recognition and potentially scoring.
-Currently I have an array of arrays that returns the boards current status of letters on the grid, including drag and dropped tiles.
-I am struggling to envision how to recognise the words however, it seems like I need to search by columns and rows and compare between.
-*/
+// Create global array to add used words to. Potentially not the best option as there is the possibility of the same word being used in different areas of the board.
 
+const wordExists = [];
+
+// Function to play a turn for the user.
 export function playTurn() {
   const allTileArr = [];
   const allTiles = document.querySelector('.gridContainer');
   let col = [];
   const complete2DArr = [];
-  const wordExists = [];
 
   for (let j = 0; j < allTiles.childNodes.length; j++) {
   // row.push(allTiles.childNodes[j].childNodes);
@@ -152,6 +150,7 @@ export function playTurn() {
     col = [];
   }
 
+  // Loop through board to check for letters.
   for (let i = 0; i < 15; i++) {
     for (let j = 0; j < 15; j++) {
       if (complete2DArr[i][j] === 'TW' || complete2DArr[i][j] === 'DL' || complete2DArr[i][j] === 'TL' || complete2DArr[i][j] === 'DW' || complete2DArr[i][j] === '★' || complete2DArr[i][j] === '') {
@@ -164,13 +163,14 @@ export function playTurn() {
   }
   console.log(complete2DArr);
 
+  // Function to find words horizontally in the multidimentional array.
   function findHorizontalWords(row, column) {
-    // Horizontal word
+    // Horizontal word.
     let horizontalWord = [];
     for (let i = column; i >= 0; i--) {
       const tileText = complete2DArr[row][i];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
-        // Tile has a letter, add it to the array
+        // Tile has a letter, add it to the array.
         horizontalWord.push(tileText.slice(-1));
         // console.log(horizontalWord.join(''));
       } else {
@@ -178,12 +178,12 @@ export function playTurn() {
       }
     }
 
-    horizontalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point
+    horizontalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point.
 
     for (let i = column + 1; i < complete2DArr[row].length; i++) {
       const tileText = complete2DArr[row][i];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
-        // Tile has a letter
+        // Tile has a letter.
         horizontalWord.push(tileText.slice(-1));
         console.log(horizontalWord.join(''));
       } else {
@@ -194,13 +194,14 @@ export function playTurn() {
     return horizontalWord;
   }
 
+  // Function to find words vertically in the multidimentional array.
   function findVerticalWords(row, column) {
-    // Vertical word
+    // Vertical word.
     let verticalWord = [];
     for (let i = row; i >= 0; i--) {
       const tileText = complete2DArr[i][column];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
-        // Tile has a letter, add it to the array
+        // Tile has a letter, add it to the array.
         verticalWord.push(tileText.slice(-1));
         // console.log(verticalWord.join(''));
       } else {
@@ -208,12 +209,12 @@ export function playTurn() {
       }
     }
 
-    verticalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point
+    verticalWord.reverse(); // Reverse array because words were added in back-to-front order up until this point.
 
     for (let i = row + 1; i < complete2DArr.length; i++) {
       const tileText = complete2DArr[i][column];
       if ((tileText.length !== 2 || tileText.split('')[0] === '★') && tileText.length !== 0) {
-        // Tile has a letter
+        // Tile has a letter.
         verticalWord.push(tileText.slice(-1));
         console.log(verticalWord.join(''));
       } else {
@@ -224,10 +225,12 @@ export function playTurn() {
     return verticalWord;
   }
 
+  //  Boakes, R. (2021). portsoc/fetch101. GitHub. Retrieved 7 May 2021, from https://github.com/portsoc/fetch101/blob/master/examples/7_interaction/script.mjs.
+
   async function validWord(word) {
     const checkURL = 'https://dictionary-dot-sse-2020.nw.r.appspot.com/' + word;
     const response = await fetch(checkURL);
-
+    // Word has already been used, check to stop duplicate checking of the same word.
     if (wordExists.includes(word)) {
       console.log(`${word} has already been used`);
     } else if (response.status === 200 && !wordExists.includes(word)) {
