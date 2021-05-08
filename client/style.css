@@ -1,3 +1,15 @@
+/*
+Media queries and flexboxes were used so the board fits different screen resolutions, the following websites were used to help me learn and implement it:
+*/
+
+/* 
+https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 
+https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/
+https://web.dev/optimize-css-background-images-with-media-queries/
+*/
+
 
 @media (min-width: 1920px) and (max-width: 2560px) {
 
@@ -608,11 +620,3 @@
         margin-left: 150px;
     }
 }
-
-/* CSS flexboxes and grid research was required, I used the below webistes to help understand and implement them:
-https://github.com/richardshepherd/CSS3-Flexbox-Tutorial/commit/e81bc042b0988e96494867bab2fcafabbb95bca0 
-https://www.smashingmagazine.com/2011/09/css3-flexible-box-layout-explained/
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-https://www.smashingmagazine.com/2020/01/understanding-css-grid-lines/
-https://web.dev/optimize-css-background-images-with-media-queries/
-*/

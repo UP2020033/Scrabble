@@ -1,3 +1,4 @@
+import * as game from './game.mjs';
 
 // Creating div element for the nav bar
 
@@ -47,6 +48,6 @@ export function addNavBar() {
   document.querySelector('.mainSection').appendChild(addNavDiv());
   document.querySelector('#navBar').appendChild(addNavDivContainer());
   document.querySelector('.navContainer').appendChild(addNavButton('navRules'));
-  document.querySelector('.navContainer').appendChild(addNavItem('Score:', 'navScore'));
+  document.querySelector('.navContainer').appendChild(addNavItem(`Score: ${game.userScore}`, 'navScore'));
   document.querySelector('#navRules').appendChild(addNavAnchor('Scrabble', 'test.com'));
 }

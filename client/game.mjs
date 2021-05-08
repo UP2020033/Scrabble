@@ -112,13 +112,16 @@ When playTurn works, I will need to make sure I no longer remove all tiles, but 
 export function skipTurn() {
   removeNonSpecialTiles();
   addNewTiles();
-  removeSpecialPlacedTiles();
   removeOccupiedStatus();
 }
+
 
 // Create global array to add used words to. Potentially not the best option as there is the possibility of the same word being used in different areas of the board.
 
 const wordExists = [];
+
+// Global variable to store user score.
+export let userScore = 0;
 
 // Function to play a turn for the user.
 export function playTurn() {
@@ -236,10 +239,16 @@ export function playTurn() {
     } else if (response.status === 200 && !wordExists.includes(word)) {
       console.log(`${word} is a valid word!`);
       wordExists.push(word);
+      // Update user score.
+      const newScore = document.querySelector('.navScore');
+      newScore.textContent = `Score: ${userScore + word.length}`;
+      userScore += word.length;
     } else if (response.status === 400) {
       console.log('This is not a valid word');
     } else if (response.status === 404) {
       console.log('This is not a valid word');
     }
   }
+  // Add new tiles at the end of the turn.
+  addNewTiles();
 }
