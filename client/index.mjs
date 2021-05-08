@@ -31,5 +31,5 @@ skipButton.addEventListener('click', game.skipTurn);
 const playButton = document.querySelector('#tilePlay');
 playButton.addEventListener('click', game.playTurn);
 
-// Invoking function to add all of the event listeners for drag and drop
+// Invoking function to add all of the event listeners for drag and drop.
 dragAndDrop.addEventListeners();

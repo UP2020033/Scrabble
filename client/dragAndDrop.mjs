@@ -60,7 +60,7 @@ export function dropHandler(e) {
     // The code below checks the draggedElement's parent element on the drop and if it contains 'gridElem', it will invoke the draggedToDrag function to change the class to 'dragElem'.
     } else if (draggedElem.parentElement.classList.contains('gridElem')) {
       draggedToDrag(draggedElem);
-    // The code below checks the draggedElement's parent element on the drop and if it contains 'dragGrid', which is the grid pool area for the draggable tiles
+    // The code below checks the draggedElement's parent element on the drop and if it contains 'dragGrid', which is the grid pool area for the draggable tiles.
     } else if (draggedElem.parentElement.classList.contains('dragGrid')) {
       draggedToDrag(draggedElem);
     /*
