@@ -56,12 +56,15 @@ export function dropHandler(e) {
     if it does then invoke the dragToDragged function to change dropped tile's className to 'draggedElem'.
     */
     if (draggedElem.parentElement.classList.contains('colourTile')) {
+      draggedElem.classList.add('dropped');
       dragToDragged(draggedElem);
     // The code below checks the draggedElement's parent element on the drop and if it contains 'gridElem', it will invoke the draggedToDrag function to change the class to 'dragElem'.
     } else if (draggedElem.parentElement.classList.contains('gridElem')) {
+      draggedElem.classList.add('dropped');
       draggedToDrag(draggedElem);
     // The code below checks the draggedElement's parent element on the drop and if it contains 'dragGrid', which is the grid pool area for the draggable tiles.
     } else if (draggedElem.parentElement.classList.contains('dragGrid')) {
+      draggedElem.classList.remove('dropped');
       draggedToDrag(draggedElem);
     /*
     Essentially, the two else if statements are there to remove the 'draggedElem' class so that the relative CSS positioning is removed and they display where they should.

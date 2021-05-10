@@ -246,6 +246,10 @@ export function playTurn() {
       const newScore = document.querySelector('.navScore');
       newScore.textContent = `Score: ${userScore + word.length}`;
       userScore += word.length;
+      const dropped = document.querySelectorAll('.dropped');
+      for (let i = 0; i < dropped.length; i++) {
+        dropped[i].draggable = false;
+      }
     } else if (response.status === 400) {
       console.log('This is not a valid word');
     } else if (response.status === 404) {

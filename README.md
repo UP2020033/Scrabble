@@ -46,12 +46,10 @@ Scoring was then introduced using a simple system of character length, this is a
 
 # Future/unfinished work
 
-1. Letters are still draggable when the word is valid and essentially 'submitted'. Work will commence to make sure words are stuck in place when they are valid.
+1. The skip button only removes/replaces tiles that are in the bottom row of draggable tiles, so if the user drops a tile then presses skip, it stays on the board.
 
-2. The skip button only removes/replaces tiles that are in the bottom row of draggable tiles, so if the user drops a tile then presses skip, it stays on the board.
+2. The user must start from the middle tile, but this is not implemented as of yet.
 
-3. The user must start from the middle tile, but this is not implemented as of yet.
+3. Score implementation based on letters and special tile multipliers.
 
-4. Score implementation based on letters and special tile multipliers.
-
-5. Users can only place tiles next to already placed tiles.
+4. Users can only place tiles next to already placed tiles.
