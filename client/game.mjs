@@ -130,6 +130,9 @@ export function playTurn() {
   let col = [];
   const complete2DArr = [];
 
+
+  // Loops creating multidimensional array.
+
   for (let j = 0; j < allTiles.childNodes.length; j++) {
   // row.push(allTiles.childNodes[j].childNodes);
     if (allTiles.hasChildNodes === true) {
