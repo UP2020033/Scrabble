@@ -44,6 +44,8 @@ Scoring was then introduced using a simple system of character length, this is a
 
 3. Currently words can only be used once as they are pushed to an array when they are found to be valid. This could be an issue with valid words that have already been used not being picked up as valid in the future.
 
+4. When an invalid word is on the board and the user presses the 'play' button, new tiles are generated at the bottom, which essentially gives the user free tiles to play with.
+
 # Future/unfinished work
 
 1. The skip button only removes/replaces tiles that are in the bottom row of draggable tiles, so if the user drops a tile then presses skip, it stays on the board.

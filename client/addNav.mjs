@@ -49,5 +49,5 @@ export function addNavBar() {
   document.querySelector('#navBar').appendChild(addNavDivContainer());
   document.querySelector('.navContainer').appendChild(addNavButton('navRules'));
   document.querySelector('.navContainer').appendChild(addNavItem(`Score: ${game.userScore}`, 'navScore'));
-  document.querySelector('#navRules').appendChild(addNavAnchor('Scrabble', 'test.com'));
+  document.querySelector('#navRules').appendChild(addNavAnchor('Scrabble', 'https://scrabble.hasbro.com/en-us/rules'));
 }
