@@ -1,4 +1,4 @@
 
 client/game.mjs
 
-./node_modules
+node_modules/
