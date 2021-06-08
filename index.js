@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('client'));
 
 // Variable to store the port value
-const portListenOn = 8080;
+const portListenOn = 80;
 
 // Listen on port
 function serverStart(portListenOn, error) {
